@@ -1,0 +1,127 @@
+/*
+Theme Name: Claustra
+Author: Ignace De Keyser
+Version:191130;
+*/
+@import 'normalize.css';
+@import './base/_mixins';
+@import './base/_global';
+@import './modules/_page-navigation';
+@import './modules/_thumbnailgrid';
+@import './modules/_news-page';
+
+.scrollcontainer{
+	overflow-y: scroll;
+	height:calc(100vh - 170px);
+	display: block;
+
+}
+.container {
+	clear:both;
+	float:center;
+	width: 100%;
+	height:auto;
+	max-width: 1120px;
+	padding-right: 0px;
+	padding-left: 0px;
+	margin-right: auto;
+	margin-left: auto;
+	text-align: center;
+	display: block;
+	
+	}
+
+.wp-block-gallery {
+	margin-top: 0rem;
+	width: 750px;
+	max-width:calc(100vw - 366px);
+	filter:brightness(100%);
+	float:left;
+}
+
+.projectinfo {
+	clear:right;
+	float:right;
+	width:auto;
+	max-width: 306px;
+	padding-left: 0px;
+	margin-bottom:10px;
+	margin-top:0px;
+	margin-right:20px;
+}
+
+.projectimage{
+	margin-bottom: 20px;
+	margin-left:20px;
+	width: 750px;
+	max-width:calc(100vw - 366px);
+	height:auto;
+	filter:brightness(100%);
+	object-fit: contain;
+}
+
+.center-image-page{
+	position:absolute;
+	top: 50%;
+  	left: 50%;
+	max-width:90%;
+	transform: translate(-50%, -50%);
+	max-height:calc(100vh - 384px);
+}
+.group:before,
+.group:after {
+  content: "";
+  display: table;
+}
+
+.group:after {
+  clear: both;
+}
+
+.group {
+  zoom: 1;
+}
+
+@mixin atMedium {
+
+	.scrollcontainer{
+		min-height:calc(100vh - 118px);
+	}
+
+	.wp-block-gallery {
+		float:center;
+		max-width:90%;
+		margin:0px;
+		padding:0px;
+		margin-left:5%;
+
+	}
+	.projectinfo {
+		float: none;
+		max-width: 90%;
+		width:800px;
+		text-align:center;
+		margin:auto;
+		margin-bottom: 10px;
+		text-align:justify;
+		text-justify:inter-word;
+
+	}
+	.projectimage{
+		float:center;
+		max-width:100%;
+		width:inherit;
+		margin:0px;
+		padding:0px;
+		margin-bottom: 5vw;
+		object-fit:contain;
+	}
+}
+
+@media only screen and (max-height: 600px) {
+	.center-image-page{
+		position:static;
+		max-height:calc(50vh);
+		transform: translate(0%, 0%);
+	}
+}

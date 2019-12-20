@@ -1,0 +1,146 @@
+@charset "UTF-8";
+
+/*
+Theme Name: Claustra
+Author: Ignace De Keyser
+Version:191130;
+*/
+$highlightColour: #DBEEF5;
+
+::-webkit-scrollbar {
+	-webkit-appearance:none;
+display: none;
+}
+@font-face{
+	src: url("/fonts/Tw-Cen-MT.ttf");
+	font-family:TW Cen MT;
+}	
+
+html {
+  	font-family: sans-serif;
+  	width: 100vw;
+  	min-height:100%;
+	  -ms-overflow-style: -ms-autohiding-scrollbar;
+	  margin:0;
+}
+contentinfo {
+	display:none;
+}
+body {
+	overflow-x: hidden;
+	overflow-y: hidden;
+  	font-family: TW Cen MT,"Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  	font-weight: 400;
+  	color: #000000;
+  	background-color: #FFFFFF;
+	text-align:center;
+	font-family:TW Cen MT;
+}
+
+a{	
+	font-size:inherit;
+	text-decoration: none;
+	color: inherit;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+	margin-left:10px;
+	font-family:TW Cen MT;
+	text-align: left;
+}
+
+h1  {
+	clear:both;
+	font-size: 4rem;
+	margin:0;
+	margin-bottom:0rem;
+	font-weight: 200;
+	float:none;
+	text-align: center;
+
+}
+
+h2  {
+	clear:both;
+	font-size: 0.8rem;
+	margin:0;
+	color: #777777;
+	font-weight: 200;
+	float:none;
+	text-align: center;
+
+}
+
+h3  {
+	clear:right;
+	font-size: 1.5rem;
+	font-weight:normal;
+	text-align: left;
+	margin:0;
+	float:right;
+	width: 326px;
+	padding:0px;
+	margin-bottom:10px;
+
+}
+
+h4  {
+  	font-size: 0.8rem;
+	font-weight:normal;
+	text-align: left;
+	margin:0;
+	float:right;
+	width: 306px;
+	margin-bottom:0.75rem;
+}
+
+h5 {
+	text-transform: uppercase;
+  	font-size: 1rem;
+  	font-weight:400;
+
+}
+
+h6 {
+  	font-size: 1rem;
+  	font-weight:normal;
+}
+
+p {
+	vertical-align: top;
+	font-size: 0.8rem;
+	font-family:TW Cen MT;
+	text-align: justify;
+	color: #777777;
+	line-height: 1rem;
+}
+
+@mixin atMedium {
+
+	h1 {
+		clear:both;
+		font-size: 3rem;
+		margin:0;
+		margin-bottom:0.25rem;
+		font-weight: 200;
+		float:none;
+		text-align: center;
+	}
+	h3 {
+		float: center;
+		margin:0;
+		margin-bottom: 1rem;
+		text-align:center;
+		width: 100%;
+		padding: 0;
+	}
+	h4 {
+		float: left;
+		margin:0;
+		margin-bottom: 0.25rem;
+		text-align:left;
+		width: 100%;
+		padding: 0;
+	}
+}

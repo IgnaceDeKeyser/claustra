@@ -1,0 +1,177 @@
+.page-navigation{
+    z-index:2;
+    @mixin atMedium {
+        display:block;
+        width:100vw;
+        height:100vh;
+        position:absolute;
+        transform: translateX(-100%);
+        transition: all 0.3s cubic-bezier(0.5, 0, 0, 1);
+        background-color: #FFF;
+    }
+    &__header{
+        vertical-align:top;
+        margin:auto;
+        float:center;
+        margin-bottom:20px;
+        margin-top:20px;
+    }
+
+    &__menu-icon{
+        display:none;
+    }
+
+    @mixin atMedium {
+        &__menu-icon{
+            width:28px;
+            height:28px;
+            position:absolute;
+            top:32px;
+            right:5%;
+            display:block;
+            z-index:3;
+            &::before{
+                content:"";
+                position:absolute;
+                top:0px;
+                left:0;
+                width:28px;
+                height:2px;
+                background-color:black;
+                transform-origin:0% 0%;
+                transition: transform 0.3s cubic-bezier(0.5, 0, 0, 1);
+            }
+            &__mid{
+                position:absolute;
+                top:14px;
+                left:0;
+                width:28px;
+                height:2px;
+                background-color:black;
+                transition: transform 0.3s cubic-bezier(0.5, 0, 0, 1);
+            }
+            &::after{
+                content:"";
+                position:absolute;
+                top:28px;
+                left:0;
+                width:28px;
+                height:2px;
+                background-color:black;
+                transform-origin:0% 100%;
+                transition: transform 0.3s cubic-bezier(0.5, 0, 0, 1);
+            }
+            &--close-x {            
+                &::before{
+                    transform: rotate(45deg) scaleX(1.42) ;
+                }
+                .page-navigation__menu-icon__mid{
+                    transform: scaleX(0.0);
+                }
+                &::after{
+                    transform: rotate(-45deg) scaleX(1.42) ;
+                }
+            }
+
+        }
+
+    }
+    &__footer{
+        position: fixed; 
+        left: 0 ; right: 0; bottom: 5px;
+        @mixin atMedium {	
+            display: none;
+        }
+    }
+
+    &__list {
+        padding:0px;
+        list-style: none;
+        text-align: center;
+        margin:0px;
+
+        @mixin atMedium {
+            transform: translate(0%, calc(-50% + 50vh));
+        }
+        
+        &__list-item:hover{
+            background-color:$highlightColour;
+            transition: all 0.3s cubic-bezier(0.5, 0, 0, 1);
+        }
+
+        &__list-item{
+
+            display:inline-block;
+            padding-left:10px;
+            padding-right:10px;
+            @mixin atMedium {
+                display:block;
+                width:50vw;
+                margin:auto;
+                float:center;
+            }
+
+            &--current{
+                background-color: $highlightColour;
+            }
+
+            &--current:hover{
+                background-color: transparent;
+                transition: all 0.3s cubic-bezier(0.5, 0, 0, 1);
+            }
+
+            &__link{
+                display: block;
+                font-family:TW Cen MT;
+                text-decoration: none;
+                font-size: 0.8rem;
+                color: #777777;
+                text-align: center;
+                @mixin atMedium {
+                    font-size: 2rem;
+                    color:black;
+                    padding: 10px;
+                }
+            }
+        }
+    }
+
+    &__link {
+        @mixin atMedium {
+            margin-top:0px;
+        }
+        &__webtitle{
+            clear:both;
+	        font-size: 4rem;
+            margin:auto;
+            margin-top:-20px;
+            margin-bottom:0rem;
+            font-weight: 200;
+            float:none;
+            text-align: center;
+            @mixin atMedium {	
+                position: relative;
+                font-size: 3rem;
+                margin-top:0px;
+                width:250px;
+                z-index:3;
+            }
+        }
+    }
+    &__subtitle{
+        margin-bottom:10px;
+        @mixin atMedium {
+            padding-bottom:10px;
+            position: relative;
+            z-index:3;
+        }
+    }
+    &--is-visible{
+        transform: translateX(0%);
+        position:absolute;
+        transition: all 0.3s cubic-bezier(0.5, 0, 0, 1);
+
+    }
+}
+
+

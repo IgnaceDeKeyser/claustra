@@ -1,0 +1,46 @@
+
+.thumbnailgrid{
+  	width: 100%;
+	display:flex;
+	flex-wrap:wrap;
+	justify-content: space-around;
+
+	&__thumbnail{
+	
+		padding:0px;
+		width: 205px;
+		height: 205px;
+		object-fit: contain;
+		object-position: 50% 50%;
+		filter:opacity(80%);
+		margin:20px;
+
+		@mixin atMedium{
+				margin-bottom:0px;
+				width: 160px;
+				height:160px;
+				margin:10px;
+				filter:opacity(100%);
+			}
+		}
+
+	&__link:hover &__title{
+		transform: translateY(0);
+		opacity:100;
+		transition: all 0.3s cubic-bezier(0.5, 0, 0, 1);
+	}
+
+	&__link:hover &__thumbnail{
+		filter:brightness(100%);
+		transform: scale(1.01);
+		transition: all 0.3s cubic-bezier(0.5, 0, 0, 1);
+	}
+	&__title {
+		margin-top:-1rem;
+		margin-bottom:0;
+		position:relative;
+		transform: translateY(-50%);
+		transition: all 0.3s cubic-bezier(0.5, 0, 0, 1);
+		opacity: 0;
+	}
+}

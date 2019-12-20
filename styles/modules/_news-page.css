@@ -1,0 +1,35 @@
+.newstitle {
+	float: center;
+	margin:0;
+	margin-bottom: 1rem;
+	text-align:center;
+	width: 100%;
+	padding: 0;
+}
+
+ .newsimage{
+ 	object-fit:contain;
+	margin-top: 0rem;
+	margin-bottom: 5px;
+	margin-left:20px;
+	margin-right:20px;
+	filter:brightness(100%);
+	max-width:calc(100% - 40px);
+	max-height:calc(100vh - 284px);
+}
+.newsinfo{
+	float:center;
+	width:auto;
+	max-width: 100%;
+	padding-left: 0px;
+	margin-bottom:30px;
+	margin-top:0px;
+	margin-right:20px;
+    margin-left:20px;
+    height:40px;
+}
+@mixin atMedium{
+    .newstitle {
+		max-width: 90%;
+    }
+}
