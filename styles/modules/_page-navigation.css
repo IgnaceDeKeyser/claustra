@@ -95,7 +95,7 @@
         }
         
         &__list-item:hover{
-            background-color:$highlightColour;
+            background-color: $highlightColour;
             transition: all 0.3s cubic-bezier(0.5, 0, 0, 1);
         }
 

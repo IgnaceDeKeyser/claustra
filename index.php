@@ -15,7 +15,7 @@
 			$projects->the_post(); 
 			$postid= get_the_id();
 			array_push($postarray, $postid);			
-			$projectstate = 'complete';
+
 		} 
 
 ?>		<!-- powered by Imagecarousel.js -->

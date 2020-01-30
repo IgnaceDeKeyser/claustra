@@ -29,7 +29,10 @@
     height:40px;
 }
 @mixin atMedium{
-    .newstitle {
-		max-width: 90%;
-    }
+	.h3 {
+		.newstitle {
+			max-width: 90%;
+			float:center;
+		}
+	}
 }

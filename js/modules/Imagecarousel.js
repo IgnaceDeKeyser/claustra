@@ -1,6 +1,5 @@
 import $ from 'jquery'
 
-// this should be optimized later so that we dont have to endlessly download the images
 class ImageCarousel{
 
 	// 1. describe and create/initiate our object
@@ -16,18 +15,18 @@ class ImageCarousel{
 
 	// 2. Events
 	events() {
-	//	this.testDivText.on("click", this.nextImage);
-	
 	}
 	// 3. methods (functions,action
 	getNextImage(){
-		$.getJSON(claustraData.root_url + '/wp-json/claustra/v1/projectinfo', function(projectdata){
-			this.nextimage = projectdata.projects[this.i % projectdata.projects.length].thumbnail;
-			this.nextlink = projectdata.projects[this.i % projectdata.projects.length].permalink;
-			this.i++;
-			this.frontimage.attr("src", this.nextimage);
-			this.frontimagelink.attr("href", this.nextlink);
-		}.bind(this));
+		if(document.getElementById('front-image'||"front-image-link")){
+			$.getJSON(claustraData.root_url + '/wp-json/claustra/v1/projectinfo', function(projectdata){
+				this.nextimage = projectdata.projects[this.i % projectdata.projects.length].thumbnail;
+				this.nextlink = projectdata.projects[this.i % projectdata.projects.length].permalink;
+				this.i++;
+				this.frontimage.attr("src", this.nextimage);
+				this.frontimagelink.attr("href", this.nextlink);
+			}.bind(this));
+		}
 	}
 
 }

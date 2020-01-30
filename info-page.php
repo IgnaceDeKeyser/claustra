@@ -4,7 +4,9 @@
 ?>	<div class="scrollcontainer">
 		<div class="container group">
 			<div class="wp-block-gallery">
+				<div>
 					<img class="projectimage" src="<?php echo get_the_post_thumbnail() ?>
+				</div>
 			</div>
 			<div class="projectinfo">
 				<?php echo get_post_field('post_content', get_the_ID()); ?>

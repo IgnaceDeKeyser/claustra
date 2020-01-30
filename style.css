@@ -1,9 +1,12 @@
 @charset "UTF-8";
-
+@font-face{
+	font-family: 'TW Cen MT';
+	src: url(/fonts/Tw-Cen-MT.ttf) format('truetype');
+}	
 /*
 Theme Name: Claustra
 Author: Ignace De Keyser
-Version:200101;
+Version:191130;
 */
 $highlightColour: #DBEEF5;
 
@@ -11,13 +14,10 @@ $highlightColour: #DBEEF5;
 	-webkit-appearance:none;
 display: none;
 }
-@font-face{
-	src: url("/fonts/Tw-Cen-MT.ttf");
-	font-family:TW Cen MT;
-}	
+
+
 
 html {
-  	font-family: sans-serif;
   	width: 100vw;
   	min-height:100%;
 	  -ms-overflow-style: -ms-autohiding-scrollbar;
@@ -29,12 +29,11 @@ contentinfo {
 body {
 	overflow-x: hidden;
 	overflow-y: hidden;
-  	font-family: TW Cen MT,"Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  	font-family: 'TW Cen MT',"Futura","Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   	font-weight: 400;
   	color: #000000;
   	background-color: #FFFFFF;
 	text-align:center;
-	font-family:TW Cen MT;
 }
 
 a{	
@@ -46,7 +45,6 @@ a{
 
 h1, h2, h3, h4, h5, h6 {
 	margin-left:10px;
-	font-family:TW Cen MT;
 	text-align: left;
 }
 
@@ -110,7 +108,6 @@ h6 {
 p {
 	vertical-align: top;
 	font-size: 0.8rem;
-	font-family:TW Cen MT;
 	text-align: justify;
 	color: #777777;
 	line-height: 1rem;
