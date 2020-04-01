@@ -10,7 +10,7 @@ class ImageCarousel{
 		this.frontimagelink = $("#front-image-link");
 		this.nextimage;
 		this.nextlink;
-		this.interval = setInterval(this.getNextImage.bind(this),3500);
+		this.interval = setInterval(this.getNextImage.bind(this),10000);
 	}
 
 	// 2. Events

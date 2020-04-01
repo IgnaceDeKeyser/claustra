@@ -10,7 +10,7 @@
 ?>	<div class="scrollcontainer">
 		<div class="container group">
 			<?php
-			$projectstate = 'archive';
+			$projectstate = 'complete';
 			$projects = new WP_Query(array(
 				'posts_per_page' =>-1,
 				'post_type' => 'projects',
@@ -39,6 +39,26 @@
 								</a>
 							<?php
 						} ?>
+<?php
+			$projectstate = 'archive';
+			$projects = new WP_Query(array(
+				'posts_per_page' =>-1,
+				'post_type' => 'projects',
+				'orderby' => 'project_date',
+				'order' => 'DESC',
+				'meta_key' => 'project_status',
+				'meta_key' => 'project_date',
+				'meta_query' => array(
+					array(
+						'key' => 'project_status',
+						'compare' => '=',
+						'value' => $projectstate
+					)
+				)	
+				
+			));
+			?>	
+						
 					<?php
 
 					while($projects->have_posts()){

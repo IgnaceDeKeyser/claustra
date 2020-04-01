@@ -28,7 +28,7 @@ contentinfo {
 }
 body {
 	overflow-x: hidden;
-	overflow-y: hidden;
+	overflow-y: scroll;
   	font-family: TW Cen MT,"Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   	font-weight: 400;
   	color: #000000;
@@ -128,7 +128,6 @@ p {
 		text-align: center;
 	}
 	h3 {
-		float: center;
 		margin:0;
 		margin-bottom: 1rem;
 		text-align:center;

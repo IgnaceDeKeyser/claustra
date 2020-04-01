@@ -13,15 +13,19 @@
 	$medium = get_field('project_medium');
 	?> <div class="scrollcontainer">
 			<div class="container group">
-					<h3> <?php the_title(); ?></h3>
+				<h3> <?php the_title(); ?></h3>
+<!-- 			<button class = "slideshowbutton" id="prevbutton"></button>
+				<button class = "slideshowbutton" id="nextbutton"></button> -->
 				<div class="wp-block-gallery">
-				<?php	while(count($image_gallery_1) > $i){ ?>
-					<div>
-						<img  class="projectimage" src=" <?php echo ($image_gallery_1[$i]) ?>">
-					</div>
-				<?php	
-				$i++;
-					} ?>
+<!-- 					<div class= slideshow> -->
+						<?php	while(count($image_gallery_1) > $i){ ?>
+							<div id ="<?php echo $i ?>">
+								<img  class="projectimage" src=" <?php echo ($image_gallery_1[$i]) ?> ">
+							</div>
+						<?php	
+						$i++;
+							} ?>
+<!-- 					</div> -->
 				</div>
 				<div class="projectinfo">
 					<h4>Medium: <?php echo $medium ?></h4>

@@ -28,7 +28,6 @@ Version:191130;
 	margin-left: auto;
 	text-align: center;
 	display: block;
-	
 	}
 
 .wp-block-gallery {
@@ -81,6 +80,27 @@ Version:191130;
 .group {
   zoom: 1;
 }
+
+/* woocommerce styles under here */
+
+.wc-block-grid__product-image{
+	display:none;
+}
+
+.product-thumbnail{
+		pointer-events: none;
+		cursor: default;
+}
+
+.product-name{
+	pointer-events: none;
+	cursor: default;
+}
+.return-to-shop{
+	display:none;
+}
+
+/* woocommerce styles above here */
 
 @mixin atMedium {
 
