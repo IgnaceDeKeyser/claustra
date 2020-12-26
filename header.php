@@ -16,10 +16,6 @@
 						<a class ="page-navigation__list__list-item__link" href="<?php echo site_url('/news/') ?>"> <?php  echo 'news' ?></a>
 					</li>
 
-					<li class ="page-navigation__list__list-item <?php if (is_page('shop') ) echo 'page-navigation__list__list-item--current' ?>">
-						<a class ="page-navigation__list__list-item__link" href="<?php echo site_url('/shop/') ?>">shop</a>
-					</li>
-
 					 <li class ="page-navigation__list__list-item <?php if (is_page('archive') or  get_post_meta(get_the_id(),'project_status', true) == 'complete' or  get_post_meta(get_the_id(),'project_status', true) == 'archive') echo 'page-navigation__list__list-item--current' ?>">
 						<a class ="page-navigation__list__list-item__link" href="<?php echo site_url('/archive/') ?>">archive</a>
 					</li> 
@@ -27,11 +23,7 @@
 					<li class ="page-navigation__list__list-item <?php if (is_page('info') ) echo 'page-navigation__list__list-item--current' ?>">
 						<a class ="page-navigation__list__list-item__link" href="<?php echo site_url('/info/') ?>">collective</a>
 					</li>
-
-
-					<li class ="page-navigation__list__list-item <?php if (is_page('cart') ) echo 'page-navigation__list__list-item--current' ?>">
-						<a class ="page-navigation__list__list-item__link" href="<?php echo site_url('/cart/') ?>">cart</a>
-					</li>
+					
 				</ul>
 			</header>
 			</nav>

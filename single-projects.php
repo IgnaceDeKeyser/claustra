@@ -9,8 +9,8 @@
 	$image_gallery_1 = array();
 	$image_gallery_1 = get_field('image_gallery_1');
 	$i=0;
-
 	$medium = get_field('project_medium');
+
 	?> <div class="scrollcontainer">
 			<div class="container group">
 				<h3> <?php the_title(); ?></h3>
@@ -28,7 +28,6 @@
 <!-- 					</div> -->
 				</div>
 				<div class="projectinfo">
-					<h4>Medium: <?php echo $medium ?></h4>
 					<?php the_content();?>
 				</div> 
 			</div>
