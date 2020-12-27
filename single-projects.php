@@ -13,24 +13,23 @@
 
 	?> <div class="scrollcontainer">
 			<div class="container group">
-				<h3> <?php the_title(); ?></h3>
-<!-- 			<button class = "slideshowbutton" id="prevbutton"></button>
-				<button class = "slideshowbutton" id="nextbutton"></button> -->
 				<div class="wp-block-gallery">
-<!-- 					<div class= slideshow> -->
+					<div class="imagegallery">
 						<?php	while(count($image_gallery_1) > $i){ ?>
-							<div id ="<?php echo $i ?>">
 								<img  class="projectimage" src=" <?php echo ($image_gallery_1[$i]) ?> ">
-							</div>
 						<?php	
 						$i++;
 							} ?>
-<!-- 					</div> -->
+					</div>
+					
+					<div class="projectinfo texttoggleoff">
+						<h3> <?php the_title(); ?></h3>
+						<?php the_content();?>
+					</div> 
 				</div>
-				<div class="projectinfo">
-					<?php the_content();?>
-				</div> 
+
 			</div>
+
 		</div>
 			<?php
 				$parentPageID = wp_get_post_parent_id(get_the_ID());
@@ -44,4 +43,12 @@
 					'child_of'=> $findChildrenOF
 				));
 			?>
+		<button id="prevbutton"><b><</b></button>
+		<button id="nextbutton"><b>></b></button>
+		<div id="info">
+			<input type="checkbox" id="moreinfobutton" name="" value="moreinfobutton">
+			<label for="moreinfobutton" id="moreinfolabel">
+			read more
+			</label>
+		</div>
 <?php get_footer(); ?>

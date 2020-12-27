@@ -8,8 +8,6 @@
 					<?php echo get_post_field('post_content', get_the_ID()); ?>
 				</div>
 			</div>
-			<div>
-				<img class="projectimage" src="<?php echo get_the_post_thumbnail() ?> ">
-			</div>
+		</div>
 	</div>
 <?php get_footer(); ?>
