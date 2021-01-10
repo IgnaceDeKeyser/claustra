@@ -1,5 +1,4 @@
 import $ from 'jquery'
-// this class is not being used in the website at the moment.
 
 class ProjectSlideshow{
 
@@ -71,8 +70,5 @@ class ProjectSlideshow{
     }
 }
     
-
-
-
 // Export the classes for import
 export default ProjectSlideshow;
