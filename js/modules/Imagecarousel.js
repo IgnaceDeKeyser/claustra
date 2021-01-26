@@ -23,8 +23,8 @@ class ImageCarousel{
 				this.nextimage = projectdata.projects[this.i % projectdata.projects.length].thumbnail;
 				this.nextlink = projectdata.projects[this.i % projectdata.projects.length].permalink;
 				this.i++;
-				this.frontimage.attr("src", this.nextimage);
-				this.frontimagelink.attr("href", this.nextlink);
+				this.frontimage.setAttribute("src", this.nextimage);
+				this.frontimagelink.setAttribute("href", this.nextlink);
 			}.bind(this));
 		}
 	}
