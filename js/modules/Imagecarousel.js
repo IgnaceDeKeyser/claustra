@@ -6,8 +6,8 @@ class ImageCarousel{
 	constructor(){
 		this.events();
 		this.i = 1;
-		this.frontimage = $("#front-image");
-		this.frontimagelink = $("#front-image-link");
+		this.frontimage = document.querySelector("#front-image");
+		this.frontimagelink = document.querySelector("#front-image-link");
 		this.nextimage;
 		this.nextlink;
 		this.interval = setInterval(this.getNextImage.bind(this),10000);
